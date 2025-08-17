@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard de Inventario</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="layout">
+  <!-- Toggle del sidebar (solo CSS) -->
+  <input id="menu-toggle" class="visually-hidden" type="checkbox" />
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" role="navigation" aria-label="Navegación lateral">
+    <div class="sidebar__brand">📦 Inventario</div>
+    <nav class="sidebar__nav">
+      <a class="nav__link is-active" href="#">Panel</a>
+      <a class="nav__link" href="#">Productos</a>
+      <a class="nav__link" href="#">Categorías</a>
+      <a class="nav__link" href="#">Entradas</a>
+      <a class="nav__link" href="#">Salidas</a>
+      <a class="nav__link" href="#">Reportes</a>
+      <a class="nav__link" href="#">Configuración</a>
+    </nav>
+  </aside>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <label class="menu-btn" for="menu-toggle" aria-label="Abrir/Cerrar menú">☰</label>
+    <h1 class="header__title">Dashboard de Inventario</h1>
+
+    <form class="header__search" role="search" aria-label="Buscar">
+      <input type="search" placeholder="Buscar producto…" aria-label="Buscar producto" />
+    </form>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main" role="main" id="contenido">
+    <!-- Tarjetas resumen -->
+    <section class="summary" aria-labelledby="resumen-title">
+      <h2 id="resumen-title" class="sr-only">Resumen</h2>
+
+      <article class="card" tabindex="0" aria-label="Productos totales 120">
+        <div class="card__content">
+          <span class="card__title">Productos Totales</span>
+          <strong class="card__value">120</strong>
+        </div>
+      </article>
+
+      <article class="card warning" tabindex="0" aria-label="Stock bajo 8">
+        <div class="card__content">
+          <span class="card__title">Stock Bajo</span>
+          <strong class="card__value">8</strong>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" aria-label="Entradas recientes 15">
+        <div class="card__content">
+          <span class="card__title">Entradas recientes</span>
+          <strong class="card__value">15</strong>
+        </div>
+      </article>
+
+      <article class="card" tabindex="0" aria-label="Salidas recientes 12">
+        <div class="card__content">
+          <span class="card__title">Salidas recientes</span>
+          <strong class="card__value">12</strong>
+        </div>
+      </article>
+    </section>
+
+    <!-- Tabla -->
+    <section class="datatable" aria-labelledby="tabla-title">
+      <h2 id="tabla-title">Listado de productos</h2>
+      <div class="table-wrapper" role="region" aria-label="Tabla desplazable">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td><td>Teclado</td><td>Electrónicos</td><td>50</td><td>Disponible</td>
+            </tr>
+            <tr>
+              <td>002</td><td>Silla</td><td>Muebles</td><td>5</td><td>Stock bajo</td>
+            </tr>
+            <tr>
+              <td>003</td><td>Mouse</td><td>Electrónicos</td><td>0</td><td>Agotado</td>
+            </tr>
+            <tr>
+              <td>004</td><td>Papel A4</td><td>Insumos</td><td>80</td><td>Disponible</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Gráfico -->
+    <section class="chart" aria-labelledby="grafico-title">
+      <h2 id="grafico-title">Inventario por categoría</h2>
+      <figure role="img" aria-label="Electrónicos 120, Muebles 45, Insumos 80, Otros 25">
+        <svg viewBox="0 0 320 160" width="100%" height="160" aria-hidden="true">
+          <rect x="20"  y="40"  width="50" height="100" rx="6"></rect>
+          <rect x="100" y="80"  width="50" height="60"  rx="6"></rect>
+          <rect x="180" y="60"  width="50" height="80"  rx="6"></rect>
+          <rect x="260" y="100" width="50" height="40"  rx="6"></rect>
+          <text x="25"  y="30">Electr.</text>
+          <text x="108" y="30">Muebles</text>
+          <text x="187" y="30">Insumos</text>
+          <text x="268" y="30">Otros</text>
+        </svg>
+        <figcaption class="sr-only">Gráfico de barras por categoría</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    © 2025 Inventario Yersson Tenjo.
+  </footer>
+
+  <!-- Fondo oscuro para sidebar móvil -->
+  <label class="backdrop" for="menu-toggle" aria-hidden="true"></label>
+</body>
+</html>
