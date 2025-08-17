@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="layout">
-  <!-- Toggle del sidebar (solo CSS) -->
+  
   <input id="menu-toggle" class="visually-hidden" type="checkbox" />
 
-  <!-- SIDEBAR -->
+  
   <aside class="sidebar" role="navigation" aria-label="Navegación lateral">
-    <div class="sidebar__brand">📦 Inventario</div>
+    <div class="sidebar__brand"> Inventario</div>
     <nav class="sidebar__nav">
       <a class="nav__link is-active" href="#">Panel</a>
       <a class="nav__link" href="#">Productos</a>
@@ -24,7 +24,7 @@
     </nav>
   </aside>
 
-  <!-- HEADER -->
+ 
   <header class="header" role="banner">
     <label class="menu-btn" for="menu-toggle" aria-label="Abrir/Cerrar menú">☰</label>
     <h1 class="header__title">Dashboard de Inventario</h1>
@@ -34,9 +34,9 @@
     </form>
   </header>
 
-  <!-- MAIN -->
+  
   <main class="main" role="main" id="contenido">
-    <!-- Tarjetas resumen -->
+    
     <section class="summary" aria-labelledby="resumen-title">
       <h2 id="resumen-title" class="sr-only">Resumen</h2>
 
@@ -69,7 +69,7 @@
       </article>
     </section>
 
-    <!-- Tabla -->
+   
     <section class="datatable" aria-labelledby="tabla-title">
       <h2 id="tabla-title">Listado de productos</h2>
       <div class="table-wrapper" role="region" aria-label="Tabla desplazable">
@@ -101,7 +101,7 @@
       </div>
     </section>
 
-    <!-- Gráfico -->
+    
     <section class="chart" aria-labelledby="grafico-title">
       <h2 id="grafico-title">Inventario por categoría</h2>
       <figure role="img" aria-label="Electrónicos 120, Muebles 45, Insumos 80, Otros 25">
@@ -120,12 +120,12 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  
   <footer class="footer" role="contentinfo">
     © 2025 Inventario Yersson Tenjo.
   </footer>
 
-  <!-- Fondo oscuro para sidebar móvil -->
+  
   <label class="backdrop" for="menu-toggle" aria-hidden="true"></label>
 </body>
 </html>
